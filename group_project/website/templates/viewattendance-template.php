@@ -3,7 +3,7 @@
   <?php
     $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
     session_start();
-    if(isset($_SESSION['id']))
+    if(isset($_SESSION['userinfo']))
     {
       $lessons = find($pdo, 'register', 'student_id', $_SESSION['id']);
       $total = 0;
@@ -44,6 +44,6 @@
     }
   ?>
 
-  
+
 
 </div>
