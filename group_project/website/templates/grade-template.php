@@ -1,5 +1,6 @@
 <div class="fullscreen">
 <?php session_start();
+require '../classes/tablegenerator.php';
 $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
 if (isset($_SESSION['userinfo']))
 {
@@ -19,7 +20,7 @@ if (isset($_SESSION['userinfo']))
     {
       $grade = 'B';
     }
-    else if ($average > = 50)
+    else if ($average >= 50)
     {
       $grade = 'C';
     }
@@ -31,7 +32,7 @@ if (isset($_SESSION['userinfo']))
     {
       $grade = 'F';
     }
-    $table->addRow([$row['module_id'], $row['grade1'], $row['grade2'], $row['grade2'], $grade])
+    $table->addRow([$row['module_id'], $row['grade1'], $row['grade2'], $row['grade2'], $grade]);
   }
 
   echo $table->getHTML();
