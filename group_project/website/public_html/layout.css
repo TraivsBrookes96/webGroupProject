@@ -166,6 +166,7 @@ span:hover{
   clear:both;
   border-bottom-style:solid;
   border-bottom-color: black;
+  margin-bottom:20px;
 }
 .module > label
 {
