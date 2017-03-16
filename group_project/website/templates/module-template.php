@@ -4,13 +4,7 @@
   $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
   if(isset($_SESSION['userinfo']))
   {
-    $stmt = find($pdo, 'students', 'student_id', $_SESSION['userinfo']);
-    foreach($stmt as $row)
-    {
-      $course_id = $row['course_code'];
-    }
-
-    $stmt1 = find($pdo, 'course_modules', 'course_id', $course_id);
+    $stmt1 = find($pdo, 'course_modules', 'course_id', $_SESSION['course_id']);
     foreach($stmt1 as $row)
     {
       $module_id = $row['module_id'];
