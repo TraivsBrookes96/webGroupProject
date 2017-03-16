@@ -13,6 +13,7 @@ if (isset($_POST['login']) ) {
   if (password_verify($_POST['password'], $students['password'])) {
     $_SESSION['studentloggedin'] = true;
     $_SESSION['userinfo'] = $students['student_id'];
+    $_SESSION['course_id'] = $students['course_code'];
     ?>
     <meta http-equiv="refresh" content="2;url=home" />
     <?php
