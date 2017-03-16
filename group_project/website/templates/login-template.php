@@ -22,7 +22,7 @@ if (isset($_POST['login']) ) {
     ?>
      <div id="LogIn">
        <form action="" method="POST">
-         <p> sorry, please check your details and try again.</p>
+         <p> sorry, please check your details and try again!</p>
          <br>
          <label>Student ID </label><input type="text" name="student_id"/>
          <br>
