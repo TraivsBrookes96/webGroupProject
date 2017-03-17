@@ -11,7 +11,15 @@ if (isset($_SESSION['userinfo']))
   $table->setColumnTypes(['td','td','td','td','td']);
   foreach($stmt as $row)
   {
-    $average = (($row['grade1'] + $row['grade2'] + $row['grade3']) / 3);
+    $percentages = find($pdo, 'modules', 'module_id', $row['module_id']);
+    foreach($percentages as $percentage)
+    {
+      $assesment1 = $percentage['assesment_one_weighting']/100;
+      $assesment2 = $percentage['assesment_two_weighting']/100;
+      $assesment3 = $percentage['exam_weighting']/100;
+    }
+
+    $average = (($row['grade1']*$assesment1) + ($row['grade2']*$assesment2) + ($row['grade3'] *$assesment3));
     if ($average >= 70)
     {
       $grade = 'A';
