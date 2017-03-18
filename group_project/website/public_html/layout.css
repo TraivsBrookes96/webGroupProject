@@ -17,7 +17,8 @@ height:65vh;
   font-size:3em;
   padding-left: 50%;
   padding-top:34px;
-  padding-bottom:44px;
+  padding-bottom:49px;
+
 }
 #logo
 {
@@ -25,11 +26,9 @@ height:65vh;
 }
 #banner
 {
-    background-color: #b5ffde;
+    background-color: #99ffff;
+    border-radius:15px;
 }
-
-
-
 span{
 
   padding-top:10px;
@@ -179,4 +178,9 @@ table, th, td
   margin-left: 10%;
   width:55vw;
   height:4vh;
+}
+body
+{
+  background-color:#e6fff4;
+
 }

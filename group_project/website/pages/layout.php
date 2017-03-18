@@ -10,7 +10,7 @@
     </head>
     <body>
     <div id="banner">
-      <img id="logo" src="logo.jpg"/>
+      <img id="logo" src="logo.png"/>
       <header>
       <h1 id="heading">
           <?php echo $heading ?>
