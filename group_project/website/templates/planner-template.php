@@ -6,27 +6,20 @@
   <?php
   $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
   session_start();
-  $stmt = $pdo->prepare('SELECT * FROM lessons WHERE lesson_id = :lesson_id AND DATE(time_date) BETWEEN :todays_date AND :end_date');
-  $lessons = find($pdo, 'register', 'student_id', $_SESSION['userinfo']);
+  $stmt = $pdo->prepare('SELECT l.time_date, l.lesson_id, r.student_id, l.staff_id, l.room_id FROM register r JOIN lessons l ON r.lesson_id = l.lesson_id WHERE r.student_id = :student_id AND DATE(l.time_date) BETWEEN :todays_date AND :end_date');
+  $criteria =
+  [
+    'student_id'=>$_SESSION['userinfo'],
+    'todays_date'=>date("Ymd"),
+    'end_date'=>date("Ymd", strtotime("+7day"))
+  ];
 
-  foreach($lessons as $id)
+  $stmt->execute($criteria);
+
+  foreach($stmt as $lesson)
   {
-    $criteria =
-    [
-      'lesson_id'=>$id['lesson_id'],
-      'todays_date'=>date("Ymd"),
-      'end_date'=>date("Ymd", strtotime("+7day"))
-    ];
-
-
-
-    $stmt->execute($criteria);
-
-    foreach($stmt as $row)
-    {
-      //this needs to find a way of organising all selected data
-
-    }
+    echo $lesson['time_date'];
+    
 
   }
 
