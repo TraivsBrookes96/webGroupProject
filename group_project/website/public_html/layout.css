@@ -1,6 +1,7 @@
 a{
   color:black;
   text-decoration: none;
+  font: bold 1em arial, sans-serif;
 
   }
 #navigation{
@@ -14,9 +15,9 @@ height:65vh;
 
 #heading
 {
-  font-size:3em;
+  font: bold 3em arial, sans-serif;
   padding-left: 50%;
-  padding-top:34px;
+  padding-top:10px;
   padding-bottom:49px;
 
 }
@@ -28,6 +29,9 @@ height:65vh;
 {
     background-color: #99ffff;
     border-radius:15px;
+    border-style:solid;
+    border-width:1px;
+    height: 135px;
 }
 span{
 
@@ -38,6 +42,8 @@ span{
   text-align:center;
   background-color:#cef2fd;;
   border-style:solid;
+  border-radius:10px;
+  margin-top:15px;
 }
 .foot_item{
   width:24%;
