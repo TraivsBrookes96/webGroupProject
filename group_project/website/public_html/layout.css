@@ -160,11 +160,7 @@ span:hover{
   float:left;
   clear:left;
 }
-.timetable_dates
-{
-  float:left;
-  margin-left:1vw;
-}
+
 .module
 {
   float:left;
@@ -181,9 +177,18 @@ span:hover{
 table, th, td
 {
   border-style:solid;
+  margin-top:15px;
   margin-left: 10%;
   width:55vw;
   height:4vh;
+}
+th
+{
+  background-color:lightblue;
+}
+td
+{
+  background-color:#e6fff4;
 }
 body
 {

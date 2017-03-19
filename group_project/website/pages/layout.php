@@ -18,13 +18,13 @@
     </header>
     </div>
   <div id="navigation">
-    <span><a href="home" class="button">Home</a></span>
-    <span><a href="planner" class="button">Planner</a></span>
-    <span><a href="grades" class="button">Grades</a></span>
-    <span><a href="http://www.outlook.com" class="button">Mail</a></span>
-    <span><a href="modules" class="button">Modules</a></span>
-    <span><a href="viewattendance" class="button>">Attendance</a></span>
-    <span><a href="logout" class="button">Log Out</a></span>
+    <a href="home" class="button"><span>Home</span></a>
+  <a href="planner" class="button"><span>Planner</span></a>
+    <a href="grades" class="button"><span>Grades</span></a>
+    <a href="http://www.outlook.com" class="button"><span>Mail</span></a>
+    <a href="modules" class="button"><span>Modules</span></a>
+    <a href="viewattendance" class="button>"><span>Attendance</span></a>
+    <a href="logout" class="button"><span>Log Out</span></a>
   </div>
   <div id="main">
     <?php echo $content?>
@@ -35,10 +35,10 @@
 
   <div id="footer">
     <footer>
-      <span class="foot_item"><a href="policies" class="button">Policies & Procedures</a></span>
-      <span class="foot_item"><a href="faqs" class="button">FAQ's</a></span>
-      <span class="foot_item"><a href="contact" class="button">Contact Us</a></span>
-      <span class="foot_item"><a href="forms" class="button">Forms</a></span>
+      <a href="policies" class="button"><span class="foot_item">Policies & Procedures</span></a>
+      <a href="faqs" class="button"><span class="foot_item">FAQ's</span></a>
+      <a href="contact" class="button"><span class="foot_item">Contact Us</span></a>
+      <a href="forms" class="button"><span class="foot_item">Forms</span></a>
     </footer>
   </div>
 </body>

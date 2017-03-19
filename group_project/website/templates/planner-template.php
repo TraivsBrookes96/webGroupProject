@@ -12,7 +12,7 @@
     'end_date'=>date("Ymd", strtotime("+7day"))
   ];
 
-  $stmt->execute($criteria);
+
 
 
 
@@ -27,12 +27,9 @@ $day7 = date('d-m-y', strtotime("+6day"));
 $table->setHeadings(['Time', $day1, $day2, $day3, $day4, $day5, $day6, $day7]);
 $table->setColumnTypes(['th','td','td','td','td','td','td','td']);
 
-
-
-  echo'</tr>';
   for($count = 0; $count <8; $count++)
   {
-
+    $stmt->execute($criteria);
     $calendarDate1 = date('d-m-y', strtotime("+0day"));
     $calendarDate2 = date('d-m-y', strtotime("+1day"));
     $calendarDate3 = date('d-m-y', strtotime("+2day"));
@@ -42,52 +39,52 @@ $table->setColumnTypes(['th','td','td','td','td','td','td','td']);
     $calendarDate7 = date('d-m-y', strtotime("+6day"));
 
     $data1=$data2=$data3=$data4=$data5=$data6=$data7 = null;
-
+    
     switch($count)
     {
-      case(0):
+      case 0:
       {
         $time = "09:00 - 09:59";
         $compareTime = "09:00:00";
         break;
       }
-      case(1):
+      case 1:
       {
         $time = "10:00 - 10:59";
         $compareTime = "10:00:00";
         break;
       }
-      case(2):
+      case 2:
       {
         $time = "11:00 - 11:59";
         $compareTime = "11:00:00";
         break;
       }
-      case(3):
+      case 3:
       {
         $time = "12:00 - 12:59";
         $compareTime = "12:00:00";
         break;
       }
-      case(4):
+      case 4:
       {
         $time = "13:00 - 13:59";
         $compareTime = "13:00:00";
         break;
       }
-      case(5):
+      case 5:
       {
         $time = "14:00 - 14:59";
         $compareTime = "14:00:00";
         break;
       }
-      case(6):
+      case 6:
       {
         $time = "15:00 - 15:59";
         $compareTime = "15:00:00";
         break;
       }
-      case(7):
+      case 7:
       {
         $time = "16:00 - 16:59";
         $compareTime = "16:00:00";
@@ -101,6 +98,7 @@ $table->setColumnTypes(['th','td','td','td','td','td','td','td']);
       $lessonDate = date('d-m-y', strtotime($lesson['time_date']));
       //this line retrives the time of a lesson
       $lessonTime = date('H:i:s', strtotime($lesson['time_date']));
+
 
 
 
