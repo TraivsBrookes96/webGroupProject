@@ -5,7 +5,7 @@
     session_start();
     if(isset($_SESSION['userinfo']))
     {
-      $lessons = find($pdo, 'register', 'student_id', $_SESSION['id']);
+      $lessons = find($pdo, 'register', 'student_id', $_SESSION['userinfo']);
       $total = 0;
       $attended = 0;
       $authabsent = 0;
@@ -31,10 +31,10 @@
         }
         $total += 1;
       }
-      $attendedPercent = (($total/100) * $attended);
-      $authabsentPercent =(($total/100) * $authabsent);
-      $absentPercent = (($total/100) * $absent);
-      $latePercent = (($total/100) * $late);
+      $attendedPercent = ((100/$total) * $attended);
+      $authabsentPercent =((100/$total) * $authabsent);
+      $absentPercent = ((100/$total) * $absent);
+      $latePercent = ((100/$total) * $late);
       ?>
       <label>Attended: </label> <p> <?php echo $attended."(".$attendedPercent."%)"; ?> </p>
       <label>Absent: </label> <p> <?php echo $absent."(".$absentPercent."%)"; ?> </p>

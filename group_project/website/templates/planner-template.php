@@ -4,6 +4,12 @@
   require '../classes/tablegenerator.php';
   $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
   session_start();
+
+  if(isset($_SESSION['userinfo']))
+  {
+
+
+
   $stmt = $pdo->prepare('SELECT l.time_date, l.lesson_id, r.student_id, l.staff_id, l.room_id FROM register r JOIN lessons l ON r.lesson_id = l.lesson_id WHERE r.student_id = :student_id AND DATE(l.time_date) BETWEEN :todays_date AND :end_date ORDER BY l.time_date ASC');
   $criteria =
   [
@@ -39,7 +45,7 @@ $table->setColumnTypes(['th','td','td','td','td','td','td','td']);
     $calendarDate7 = date('d-m-y', strtotime("+6day"));
 
     $data1=$data2=$data3=$data4=$data5=$data6=$data7 = null;
-    
+
     switch($count)
     {
       case 0:
@@ -137,6 +143,7 @@ $table->setColumnTypes(['th','td','td','td','td','td','td','td']);
 
   }
 echo $table->getHTML();
+}
   ?>
 
 
