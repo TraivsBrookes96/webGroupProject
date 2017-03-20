@@ -46,7 +46,7 @@ if (isset($_SESSION['userinfo']))
     {
       $grade = 'F';
     }
-    $table->addRow([$row['module_title']." (".$row['module_id'].")", $row['grade1']." ".$row['grade1_date'], $row['grade2']." ".$row['grade2_date'], $row['grade2'], $grade." ".$row['grade3_date']]);
+    $table->addRow([$row['module_title']." (".$row['module_id'].")", $row['grade1']."% ".$row['grade1_date'], $row['grade2']."% ".$row['grade2_date'], $row['grade3']."% ".$row['grade3_date'], $grade]);
   }
   echo'<h2> Welcome to the Grades Page</h2>';
   echo'<p>This table shall show all grades for modules that a student has available to them on a course they have signed up for.</p>';

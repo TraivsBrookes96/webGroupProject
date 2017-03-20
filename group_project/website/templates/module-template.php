@@ -16,6 +16,8 @@
           <br>
           <label>Level: </label>'.$module['level'].'
           <br>
+          <label>Credits: </lable>'.$module['points'].'
+          <br>
           <label>Description: </label>'.$module['module_description'].'
         </div>';
       }

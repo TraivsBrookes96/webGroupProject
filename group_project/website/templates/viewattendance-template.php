@@ -35,12 +35,15 @@
       $authabsentPercent =((100/$total) * $authabsent);
       $absentPercent = ((100/$total) * $absent);
       $latePercent = ((100/$total) * $late);
-      
+
       ?>
-      <label>Attended: </label> <p> <?php echo $attended."(".$attendedPercent."%)"; ?> </p>
-      <label>Absent: </label> <p> <?php echo $absent."(".$absentPercent."%)"; ?> </p>
-      <label>Authorised Absences: </label> <p> <?php echo $authabsent."(".$authabsentPercent."%)"; ?> </p>
-      <label>Late: </label> <p> <?php echo $late."(".$latePercent."%)"; ?> </p>
+      <h2>Attendance For Student: <?php echo $_SESSION['userinfo'];?></h2>
+      <p>Below you will be able to see the attendance figures for yourself. This will show all cases of attendance, absence, authorised absence and latness.</p>
+      <label>Attended: </label>  <?php echo $attended."(".$attendedPercent."%)"; ?> <br>
+      <label>Absent: </label> <?php echo $absent."(".$absentPercent."%)"; ?><br>
+      <label>Authorised Absences: </label>  <?php echo $authabsent."(".$authabsentPercent."%)"; ?><br>
+      <label>Late: </label>  <?php echo $late."(".$latePercent."%)"; ?>
+
       <?php
     }
   ?>

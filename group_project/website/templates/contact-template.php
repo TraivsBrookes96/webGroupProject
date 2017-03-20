@@ -19,8 +19,13 @@ if(isset($_SESSION['userinfo']))
             <div class="module">
             <label>Staff Member: </label>'.$detail['firstname'].' '.$detail['surname'].'<br>
             <label>Email: </label>'.$detail['email_address'].'<br>
-            <label>Qualifications: </label>'.$detail['qualification'].'
-            </div>';
+            <label>Qualifications: </label>'.$detail['qualification'];
+            if($detail['img']!= "" && $detail['img'] != null)
+            {
+              echo'<img src='.$detail['img'].' width="200"';
+            }
+
+            echo'</div>';
 
           }
         }
