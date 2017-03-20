@@ -35,6 +35,7 @@
       $authabsentPercent =((100/$total) * $authabsent);
       $absentPercent = ((100/$total) * $absent);
       $latePercent = ((100/$total) * $late);
+      
       ?>
       <label>Attended: </label> <p> <?php echo $attended."(".$attendedPercent."%)"; ?> </p>
       <label>Absent: </label> <p> <?php echo $absent."(".$absentPercent."%)"; ?> </p>
