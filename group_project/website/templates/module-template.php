@@ -4,6 +4,8 @@
   $pdo = new PDO('mysql:dbname=wuc;host=127.0.0.1', 'student', 'student');
   if(isset($_SESSION['userinfo']))
   {
+    echo'<h2>Modules</h2>
+    <p>Below you will find details about all of the modules that are linked to the course that you are enrolled on. </p>';
     $stmt1 = find($pdo, 'course_modules', 'course_id', $_SESSION['course_id']);
     foreach($stmt1 as $row)
     {
