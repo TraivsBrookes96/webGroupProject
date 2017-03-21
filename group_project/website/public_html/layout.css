@@ -160,6 +160,19 @@ span:hover{
   float:left;
   margin-left:1vw;
 }
+.module
+{
+  float:left;
+  clear:both;
+  border-bottom-style:solid;
+  border-bottom-color: black;
+  margin-bottom:20px;
+}
+.module > label
+{
+  float:left;
+  clear:left;
+}
 table, th, td
 {
   border-style:solid;
