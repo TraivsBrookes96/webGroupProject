@@ -3,6 +3,7 @@ session_start();
 require '../database/databaseconnection.php';
 ?>
 <div class="fullscreen">
+<<<<<<< HEAD
   <?php
   if (isset($_SESSION['studentloggedin']) && $_SESSION['studentloggedin'] == true) {
     $stmt = $pdo->prepare('SELECT * FROM students WHERE student_id = :student_id');
@@ -18,10 +19,12 @@ require '../database/databaseconnection.php';
   echo '<h3>'. 'Your student id is: '. $students['student_id']. '</h3>';
 
    ?>
+=======
+>>>>>>> origin/master
   <p>Please ammend the data below so that it is correct</p>
   <p>Any data changed will be submitted to the admin team to approve.</p>
-  <br>
   <form action="change-details" method="post">
+<<<<<<< HEAD
     <input type="hidden" name="student_id" value="<?php echo $students['student_id'] ?>">
     <label class="details-form">Firstname</label>
     <input class="details-form" type="text" name="firstname" value="<?php echo $students['firstname']  ?>"/>
@@ -85,3 +88,16 @@ else {
 
 
  ?>
+=======
+    <label class="details-form">Forename</label><input class="details-form" type="text" name="forename"/>
+    <label class="details-form" >Surname</label><input class="details-form"  type="text" name="surname"/>
+    <label class="details-form" >Term Address</label><input class="details-form"  type="text" name="taddress"/>
+    <label class="details-form" >Home Address</label><input class="details-form"  type="text" name="haddress"/>
+    <label class="details-form" >Email Address</label><input class="details-form"  type="text" name="email"/>
+    <label class="details-form" >Mobile Number</label><input class="details-form" type="text" name="phone-num"/>
+    <br>
+    <input  class="details-form" type="submit" name="submit" value="Submit For Approval"/>
+  </form>
+  <a href=forms>Return to forms</a>
+</div>
+>>>>>>> origin/master
