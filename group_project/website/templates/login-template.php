@@ -14,7 +14,7 @@ if (isset($_POST['login']) ) {
     $_SESSION['studentloggedin'] = true;
     $_SESSION['userinfo'] = $students['student_id'];
     ?>
-    <meta http-equiv="refresh" content="2;url=home" />
+    <meta http-equiv="refresh" content="1;url=home" />
     <?php
   }
 
