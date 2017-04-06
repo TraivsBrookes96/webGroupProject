@@ -63,10 +63,9 @@ span:hover{
   float:left;
   margin-top:2vh;
   margin-left:5vw;
-
   width:50vw;
   height:54vh;
-  
+
 }
 #announcments
 {
@@ -75,8 +74,8 @@ span:hover{
   margin-top:2vh;
   margin-left:10vw;
   border-style:solid;
-  width:38vw;
-  height:28vh;
+  width:78vw;
+  height:38vh;
   background-color: #cef2fd;
 }
 #notes
@@ -88,7 +87,7 @@ span:hover{
   margin-left:10vw;
   border-style:solid;
   width:38vw;
-  height:25vh;
+  height:20vh;
   background-color: #cef2fd;
 
 
@@ -101,17 +100,41 @@ span:hover{
   margin-left:2vw;
   border-style:solid;
   width:38vw;
-  height:25vh;
+  height:28vh;
+  background-color: #cef2fd;
+}
+#announcments-main
+{
+  overflow-y: scroll;
+  float:left;
+  margin-left:2vw;
+  margin-top:1vh;
+  padding-left: 1vw;
+  border-style:solid;
+  width:55vw;
+  height:21vh;
+  background-color: #cef2fd;
+}
+#announcments-main2
+{
+
+  float:left;
+  margin-left:1vw;
+  margin-top:1vh;
+  border-style:solid;
+  width:15vw;
+  height:21vh;
   background-color: #cef2fd;
 }
 #notifications
 {
   overflow-y: scroll;
   float:left;
+  margin-top:2vh;
   margin-left:2vw;
   border-style:solid;
   width:38vw;
-  height:28vh;
+  height:20vh;
   background-color: #cef2fd;
 }
 #forms-main

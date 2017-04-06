@@ -31,8 +31,6 @@
 
   </div>
 
-
-
   <div id="footer">
     <footer>
       <span class="foot_item"><a href="policies" class="button">Policies & Procedures</a></span>
