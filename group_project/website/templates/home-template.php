@@ -3,7 +3,7 @@ session_start();
 require '../database/databaseconnection.php';
 ?>
 <div id="announcments">
-  <h2>  Announcments</h2>
+  <h2>  Announcements</h2>
 
   <?php
   $stmt = $pdo->prepare('SELECT a.message, a.title, a.posted_date, a.posted_by, a.module_id
